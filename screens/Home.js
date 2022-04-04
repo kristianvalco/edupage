@@ -14,7 +14,7 @@ const Home = () => {
         tabBarIcon: ({ focused, color }) => {
           let iconName;
 
-          if (route.name === 'Home') {
+          if (route.name === 'Dashboard') {
             iconName = focused ? 'ios-home' : 'ios-home';
           } else if (route.name === 'TodaySchedule') {
             iconName = focused ? 'calendar' : 'calendar';
@@ -27,14 +27,14 @@ const Home = () => {
         tabBarStyle: {
           backgroundColor: COLORS.white,
           borderTopWidth: 0,
-          ...SHADOWS.dark,
-          height: 64,
+          ...SHADOWS.light,
+          height: 56,
         },
         tabBarIconStyle: {
-          marginTop: SIZES.base,
+          marginTop: SIZES.extraSmall,
         },
         tabBarLabelStyle: {
-          fontSize: 10,
+          fontSize: SIZES.base,
           fontFamily: FONTS.semiBold,
           marginBottom: SIZES.base,
         },

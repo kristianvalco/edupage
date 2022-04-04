@@ -27,26 +27,24 @@ const App = () => {
   if (!loaded) return null;
 
   return (
-    <>
-      <NavigationContainer theme={theme}>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{ 
-              tabBarLabel: 'Domov',
-              title: 'Domov',
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="Subject"
-            component={Subject}
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </>
+    <NavigationContainer theme={theme}>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarLabel: 'Domov',
+            title: 'Domov',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Subject"
+          component={Subject}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

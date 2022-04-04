@@ -1,5 +1,4 @@
 import { View, SafeAreaView, Text } from 'react-native';
-
 import { COLORS, FONTS, SIZES } from '../constants';
 import { FocusedStatusBar } from '../components';
 
@@ -8,7 +7,6 @@ const Dashboard = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar
         backgroundColor={COLORS.white}
-        barStyle="dark-content"
       />
       <View style={{ flex: 1 }}>
         <View style={{ 

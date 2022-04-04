@@ -1,15 +1,16 @@
 import { View, SafeAreaView, FlatList, Text } from 'react-native';
+
 import moment from 'moment';
 
 import { COLORS, FONTS, SIZES, SubjectData } from '../constants';
 import { SubjectCard, FocusedStatusBar } from '../components';
+import { CircleButton } from '../components/Button';
 
 const TodaySchedule = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar 
         backgroundColor={COLORS.white}
-        barStyle="dark-content"
       />
       <FlatList
         data={SubjectData}
@@ -21,16 +22,26 @@ const TodaySchedule = () => {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            alignItems: 'center',
+            paddingTop: SIZES.extraSmall,
+            paddingBottom: SIZES.extraLarge,
           }}>
+            <CircleButton
+              iconName={'ios-arrow-back'}
+              handlePress={() => {}}
+            />
             <Text style={{
               fontSize: SIZES.font,
               fontFamily: FONTS.semiBold,
               color: COLORS.primary,
-              paddingTop: SIZES.extraSmall,
-              paddingBottom: SIZES.extraLarge,
+              marginHorizontal: SIZES.font,
             }}>
               { moment().format('dddd DD.MM.YYYY') }
             </Text>
+            <CircleButton
+              iconName={'ios-arrow-forward'}
+              handlePress={() => {}}
+            />
           </View>
         )}
       />
